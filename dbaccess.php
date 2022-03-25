@@ -15,7 +15,7 @@ if($mysqli){
         if($result){
             //extraire les résultats
             while (($book = mysqli_fetch_assoc($result)) != null){
-                $books = [$book];
+                $books[] = $book;
             }
             //libérer la mémoire
             //mysql_free_result($result);
