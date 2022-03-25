@@ -18,9 +18,8 @@ if($mysqli){
                 $books[] = $book;
             }
             //libérer la mémoire
-            //mysql_free_result($result);
+            mysqli_free_result($result);
         }
-
     } else {
         $message = "Base de donnée inconnue";
     }
